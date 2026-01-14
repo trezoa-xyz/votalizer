@@ -1,13 +1,13 @@
 # Votalizer
 
-The votalizer uses the [Solana RPC PubSub WebSocket Endpoint](https://docs.solana.com/developing/clients/jsonrpc-api)
+The votalizer uses the [Trezoa RPC PubSub WebSocket Endpoint](https://docs.trezoa.com/developing/clients/jsonrpc-api)
 to monitor validator votes in real time.
 
 If a lockout violation is detected, an incident log file is created with
 details.
 
 Note that some of the transaction signatures in an incident log file may not be
-available on http://explorer.solana.com. This occurs specifically when a
+available on http://explorer.trezoa.com. This occurs specifically when a
 transaction lands in a non-finalized fork.
 
 To be notified by Slack when an incident occurs, export your desired Slack

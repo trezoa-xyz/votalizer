@@ -4,9 +4,9 @@ use {
     futures_util::StreamExt,
     itertools::Itertools,
     log::*,
-    solana_clap_utils::input_validators::{is_url_or_moniker, normalize_to_url_if_moniker},
-    solana_client::nonblocking::pubsub_client::PubsubClient,
-    solana_sdk::{clock::Slot, pubkey::Pubkey, signature::Signature},
+    trezoa_clap_utils::input_validators::{is_url_or_moniker, normalize_to_url_if_moniker},
+    trezoa_client::nonblocking::pubsub_client::PubsubClient,
+    trezoa_sdk::{clock::Slot, pubkey::Pubkey, signature::Signature},
     std::{
         collections::{BTreeMap, HashMap, HashSet},
         fs::File,
@@ -35,10 +35,10 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .get_matches();
 
     let json_rpc_url = normalize_to_url_if_moniker(matches.value_of("json_rpc_url").unwrap());
-    let websocket_url = solana_cli_config::Config::compute_websocket_url(&json_rpc_url);
+    let websocket_url = trezoa_cli_config::Config::compute_websocket_url(&json_rpc_url);
 
     let notifier = Notifier::default();
-    solana_logger::setup_with_default("info");
+    trezoa_logger::setup_with_default("info");
 
     info!("websocket URL: {}", websocket_url);
 

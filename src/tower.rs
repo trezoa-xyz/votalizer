@@ -1,8 +1,8 @@
 use {
     itertools::Itertools,
     log::*,
-    solana_sdk::{clock::Slot, pubkey::Pubkey, signature::Signature},
-    solana_vote_program::vote_state::{Lockout, MAX_LOCKOUT_HISTORY},
+    trezoa_sdk::{clock::Slot, pubkey::Pubkey, signature::Signature},
+    trezoa_vote_program::vote_state::{Lockout, MAX_LOCKOUT_HISTORY},
     std::{
         collections::{BTreeMap, HashSet, VecDeque},
         fmt::Write,
