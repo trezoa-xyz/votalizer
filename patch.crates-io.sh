@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Patches the SPL crates for developing against a local trezoa monorepo
+# Patches the TRZ crates for developing against a local trezoa monorepo
 #
 
 trezoa_dir=$1

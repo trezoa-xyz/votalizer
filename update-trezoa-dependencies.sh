@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Updates the trezoa version in all the SPL crates
+# Updates the trezoa version in all the TRZ crates
 #
 
 here="$(dirname "$0")"
